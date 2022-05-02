@@ -1,0 +1,57 @@
+Devo fare il regalo per a Silvia per il compleanno
+
+Penso a che regalo potrebbe piacere a Silvia
+
+Trovo le categoria papabili
+
+Accedo ad Amazon
+
+FINCHE' [devo aggiungere il regalo al carrello] {
+
+    Ricerco un articolo di categoria lampada
+
+    FINCHE' [ci sono articoli disponibili della categoria AND non ho scelto un regalo] {
+
+        Scelgo un articolo
+
+        SE (la spedizione dell'articolo è Prime AND rispetta il prezzo AND è particolare come piace a Silvia)
+
+        Aggiungo l'articolo nel carrello
+
+        ALTRIMENTI passo al prodotto succesivo
+    }
+
+    SE (non ho già comprato un regalo) {
+
+        Ricerco un articolo di categoria stilografica
+
+        FINCHE' [ci sono articoli disponibili della categoria AND non ho scelto un regalo] {
+
+            Scelgo un articolo
+
+            SE (la spedizione dell'articolo è Prime AND rispetta il prezzo)
+
+            Aggiungo l'articolo nel carrello
+
+            ALTRIMENTI passo al prodotto succesivo
+        }
+    }
+    
+    SE (non ho già comprato un regalo) {
+
+        Ricerco un articolo di categoria libro
+
+        FINCHE' [ci sono articoli disponibili della categoria AND non ho scelto un regalo] {
+
+            Scelgo un articolo
+
+            SE (la spedizione dell'articolo è Prime AND rispetta il prezzo AND è un classico di letteratura)
+
+            Aggiungo l'articolo nel carrello
+
+            ALTRIMENTI passo al prodotto succesivo
+        }
+    }
+}
+
+Procedo al pagamento
